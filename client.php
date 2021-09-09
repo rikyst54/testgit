@@ -87,11 +87,20 @@ class Client
         $this->cp = $cp;
         $this->age = $age;
     }
+    public function afficher()
+    {
+        echo "Nom : " . $this->nom . "<br>";
+        echo "Prénom : " . $this->prenom . "<br>";
+        echo "Tèl. : " . $this->tel . "<br>";
+        echo "Email : " . $this->email . "<br>";
+        echo "Adresse : " . $this->adresse . "<br>";
+        echo "Ville : " . $this->ville . "<br>";
+        echo "Cp : " . $this->cp . "<br>";
+        echo "Age : " . $this->age;
+    }
 }
 
 // définir variable
 $client = new Client("test", "test", "00.00.00.00.00", "test@gmail.com", "test", "test", 00, 00);
 
-echo "<pre>";
-print_r($client);
-echo "</pre>";
+var_dump($client->afficher());
